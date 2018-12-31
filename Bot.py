@@ -1,6 +1,6 @@
 import discord
 import asyncio
-import HQ
+import hq
 
 
 client = discord.Client()
