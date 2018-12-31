@@ -5,7 +5,6 @@ import os
 
 
 client = discord.Client()
-hq_inst=hq
 
 @client.event
 async def on_ready():
@@ -26,7 +25,7 @@ async def on_message(message):
         result_state = ''
        
         # phone authenticate
-        result_state = hq_inst.authenticate(args_val[2])
+        result_state = hq.authenticate(args_val[2])
         if result_state == "error_phone":
             embed.add_field(name="Wrong Phone", value=f'{author.name} check phone number [{args_val[2]}]')
             embed.add_field(name="Wrong Phone", value=f'{author.name} check {args_val[2]}')
@@ -42,12 +41,12 @@ async def on_message(message):
         if len(args_val) < 4:
             embed.add_field(name="Error Command", value=f'!hq life <sms_code> <referral username>')
         else:
-            result_state = hq_inst.verification(args_val[2])
+            result_state = hq.verification(args_val[2])
             if result_state == "error_sms":
                 embed.add_field(name="Wrong SMS Code", 
                   value=f'{author.name}: Phone verifiy code wrong **[{args_val[2]}]**')
             else:
-                result_state = hq_inst.create_referral(args_val[3])
+                result_state = hq.create_referral(args_val[3])
 
                 if result_state == "error_exist_user":
                     embed.add_field(name="Wrong create user", 
@@ -68,7 +67,7 @@ async def on_message(message):
         if len(args_val) < 3:
             embed.add_field(name="Error Command", value=f'!hq stats <username>')
         else:
-            result_state = hq_inst.get_user(args_val[2])
+            result_state = hq.get_user(args_val[2])
             if result_state == "error_auth":
                 embed.add_field(name="Error Auth", value=f"Bot have no hq Auth")
             elif result_state == "error_no_user":
