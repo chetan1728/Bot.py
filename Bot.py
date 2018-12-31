@@ -4,7 +4,7 @@ import hq
 
 
 client = discord.Client()
-hq_inst = hq.HQ()
+hq_inst = hq
 
 @client.event
 async def on_ready():
