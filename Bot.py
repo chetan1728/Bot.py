@@ -1,10 +1,10 @@
 import discord
 import asyncio
-import hq
+import HQ
 
 
 client = discord.Client()
-hq_inst = hq.hq()
+hq_inst = hq.HQ():
 
 @client.event
 async def on_ready():
