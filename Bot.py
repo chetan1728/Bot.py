@@ -1,5 +1,3 @@
-play.py
-
 from base64 import b64encode
 from os import makedirs
 from os.path import join, basename
