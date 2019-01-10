@@ -6,7 +6,7 @@ import os
 #from itertools import cycle
 
 
-client = commands.Bot(command_prefix = "+")
+client = commands.Bot(command_prefix = "#")
 
 players = {}
 queues = {}
@@ -27,7 +27,7 @@ def check_queue(id):
 @client.event
 async def on_ready():
     #show the presence
-    await client.change_presence(game=discord.Game(name='Test'))
+    await client.change_presence(game=discord.Game(name='Testing'))
     print("Bot online.")
 
 #Join the Bot into your voice channel
