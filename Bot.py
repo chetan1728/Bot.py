@@ -5,7 +5,7 @@ import youtube_dl
 #from itertools import cycle
 
 
-client = commands.Bot(command_prefix = +)
+client = commands.Bot(command_prefix = "+")
 
 players = {}
 queues = {}
