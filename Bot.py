@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import asyncio
 import youtube_dl
+import os
 #from itertools import cycle
 
 
@@ -91,4 +92,4 @@ async def queue(ctx, url=None):
             await client.say('list is queuing.')'''
 
 
-client.run(token) 
+client.run(os.getenv('Token'))
