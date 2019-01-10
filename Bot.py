@@ -4,12 +4,6 @@ import asyncio
 import youtube_dl
 #from itertools import cycle
 
-data = open('configure.txt').read().split('\n')
-playlist = open('playlist').read().split('\n')
-
-token = data[1]
-
-prefix = data[3]
 
 client = commands.Bot(command_prefix = prefix)
 
