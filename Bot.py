@@ -15,14 +15,12 @@ from discord import Game, Embed, Color, Status, ChannelType
 Client = discord.Client() #Initialise Client 
 client = commands.Bot(command_prefix = "?") #Initialise client bot
 
-async def status_task():
+async def watch():
+    #YOU CAN MAKE YOUR OWN LIST, BUT FEEL FREE TO USE MINE
+    watch_list = ['Man vs Wild', 'Supernatural', 'Trick2g', 'RIOT GAMES', 'You', '@everyone', 'Silent Hill', 'The Grudge', 'Mouse Trap Mondays:Shawn Woods']
     while True:
-        await client.change_presence(game=discord.Game(name='for 𝓜𝓸𝓸𝓷 𝓵𝓲𝓽𝓮 𝓽𝓻𝓲𝓿𝓲𝓪 '))
-        await asyncio.sleep(5)
-        await client.change_presence(game=discord.Game(name='with '+str(len(set(client.get_all_members())))+' users'))
-        await asyncio.sleep(5)
-        await client.change_presence(game=discord.Game(name='in '+str(len(client.servers))+' servers'))
-        await asyncio.sleep(5)
+        await asyncio.sleep(8)
+        await yakumo.change_presence(game=discord.Game(name=random.choice(watch_list),type=3))
 
 
 @client.event 
