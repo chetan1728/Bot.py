@@ -14,7 +14,7 @@ async  def  on_ready ():
 @ client.command ( pass_context  =  True )
 async  def  info ( ctx , * args ):
     await client.delete_message (ctx.message)
-    wait client.say ( " $ steam -to get the steam community group \ n $ collec -to get the gmod \ n $ site server collection -to get the community site / forum. " )
+    await client.say ( " $ steam -to get the steam community group \ n $ collec -to get the gmod \ n $ site server collection -to get the community site / forum. " )
 
 @ client.command ( pass_context  =  True )
 async  def  steam ( ctx , * args ):
