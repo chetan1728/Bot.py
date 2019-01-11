@@ -190,4 +190,5 @@ class JoinBot(discord.Client):
 
 if __name__ == '__main__':
     bot = JoinBot()
-    client.run(os.getenv('Token'))
+
+client.run(os.getenv('Token'))
