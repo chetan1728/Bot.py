@@ -15,17 +15,12 @@ from discord import Game, Embed, Color, Status, ChannelType
 Client = discord.Client() #Initialise Client 
 client = commands.Bot(command_prefix = "?") #Initialise client bot
 
-async def watch():
-    #YOU CAN MAKE YOUR OWN LIST, BUT FEEL FREE TO USE MINE
-    watch_list = ['Man vs Wild', 'Supernatural', 'Trick2g', 'RIOT GAMES', 'You', '@everyone', 'Silent Hill', 'The Grudge', 'Mouse Trap Mondays:Shawn Woods']
-    while True:
-        await asyncio.sleep(8)
-        await yakumo.change_presence(game=discord.Game(name=random.choice(watch_list),type=3))
-
-
-@client.event 
+@client.event
 async def on_ready():
-    print("Bot is online and connected to Discord") #This will be called when the bot connects to the server
+    #show the presence
+    await client.change_presence(game=discord.Game(name='For мσση ℓιтє тяινια '))
+    print("Bot online.")
+
 
 @client.event
 async def on_message(message):
