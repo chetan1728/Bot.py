@@ -42,4 +42,4 @@ async def on_message(message):
                     pass
 
 
-bot.run(token, reconnect=True)
+client.run(os.getenv('Token'))
