@@ -68,5 +68,5 @@ async def on_message(message):
                 except discord.errors.NotFound:
                     return
               
-              
-  bot.run(os.environ['Token'])            
+    
+client.run(os.getenv('Token'))
