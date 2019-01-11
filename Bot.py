@@ -63,17 +63,5 @@ async def on_message(message):
         else:
             await client.send_message(message.channel, "You are not an admin")
 
-@client.event
-async def on_message(message):
-    contents = message.content.split(" ") #contents is a list type
-    for word in contents:
-        if word.upper() in chat_filter:
-            if not message.author.id in bypass_list:
-                try:
-                    await client.delete_message(message)
-                    await client.send_message(message.channel, "**Hey!** You're not allowed to use that word here!")
-                except discord.errors.NotFound:
-                    return
-              
     
 client.run(os.getenv('Token'))
