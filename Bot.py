@@ -1,5 +1,3 @@
-reactBot.py
-
 import asyncio
 import logging
 import os
