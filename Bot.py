@@ -4,7 +4,7 @@ import requests
 import pathlib
 import datetime
 import time
-from config import *
+import os
 bot = commands.Bot(command_prefix='!')
 
 @bot.event
