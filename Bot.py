@@ -63,4 +63,4 @@ async def on_message(message):
                     return
               
               
-  client.run(os.getenv('Token'))            
+  bot.run(os.environ['Token'])            
