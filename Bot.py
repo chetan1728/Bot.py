@@ -1,4 +1,4 @@
-import discord, asyncio, random
+import discord, asyncio, random, os
 from discord.ext.commands import Bot
 
 x = " [ \ 033 [92m * \ 033 [0m] "
