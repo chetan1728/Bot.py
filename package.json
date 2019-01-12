@@ -9,23 +9,4 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chetan1728/Bot.py
-  "keywords": [
-    "discord",
-    "bot",
-    "music"
-  ],
-  "author": "agubelu",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/chetan1728/Bot.py/"
-  },
-  "dependencies": {
-    "discord.js": "^11.0.0",
-    "ytdl-core": "^0.7.21",
-    "node-opus": "^0.2.4"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "homepage": "https://github.com/chetan1728/Bot.py#readme"
-}
+  
